@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int f(int x)
+void f(int &x)
 {
 	int a, b, c;
 	a = x % 10;
@@ -10,12 +10,11 @@ int f(int x)
 	x += b;
 	x = x - b * 100;
 	x = x + a * 100;
-	return x;
 }
 int main()
 {
 	int n;
 	cin >> n;
-	cout << f(n);
+	f(n);
+	cout << n;
 }
-
