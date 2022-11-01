@@ -1,0 +1,29 @@
+#define _USE_MATH_DEFINES
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+double f(double x)
+{
+	if (fabs(x) < M_PI / 2)
+	{
+		return sin(x);
+	}
+	if (M_PI / 2 <= fabs(x) <= M_PI)
+	{
+		return cos (x);
+	}
+	if (fabs(x) > M_PI)
+	{
+		return 0;
+	}
+}
+int main()
+{
+	double a, b, h;
+	cin >> a >> b >> h;
+	for (; a <= b; a += h)
+	{
+		cout << a << "\t" << f(a) << endl;
+	}
+}
