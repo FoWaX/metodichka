@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+#include<cmath>
+
+void f(double x)
+{
+	if (5 - pow(x, 3) <= 0)
+	{
+		cout << "Ne opredeleno";
+	}
+	else
+	{
+		cout << sqrt(5 - pow(x, 3));
+	}
+}
+int main()
+{
+	double a, b, h;
+	cin >> a >> b >> h;
+	for (; a <= b; a += h)
+	{
+		cout << a << "\t";
+		f(a);
+		cout << endl;
+	}
+}
