@@ -1,0 +1,23 @@
+
+#include <iostream>
+#include<cmath>
+using namespace std;
+
+int main()
+{
+	int k;
+	long double x,s,a;
+	s = 0;
+	a = 1;
+	cin >> k >> x;
+	for (int n = 0; n <= k; n++)
+	{
+		for (int i = 1; i <= 2 * n + 1; i++)
+		{
+			a *= i;
+		}
+		s += (pow(-1, n + 1) * pow(x, 2 * n + 1)) / a;
+	}
+	cout << s;
+}
+
