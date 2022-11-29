@@ -1,0 +1,20 @@
+
+#include <iostream>
+#include<cmath>
+using namespace std;
+
+int main()
+{
+	int n;
+	double s, a;
+	a = 0;
+	s = 0;
+	cin >> n;
+	for (int i = 1; i <= n; i++)
+	{
+		a += sin(i);
+		s += 1. / a;
+	}
+	cout << s;
+}
+
