@@ -6,17 +6,19 @@ using namespace std;
 int main()
 {
 	int k;
-	long double x,s,a;
-	s = 0;
-	a = 1;
+	int n = 0;
+	long double x, s, a, b, c;
 	cin >> k >> x;
-	for (int n = 0; n <= k; n++)
+	a = 1;
+	b = -1;
+	c = x;
+	s = (b * c) / a;
+	for (int i = n+1; i <= k; i++)
 	{
-		for (int i = 1; i <= 2 * n + 1; i++)
-		{
-			a *= i;
-		}
-		s += (pow(-1, n + 1) * pow(x, 2 * n + 1)) / a;
+		a *= (2 * i) * (2 * i + 1);
+		b *= -1;
+		c *= x * x;
+		s += (b * c) / a;
 	}
 	cout << s;
 }
