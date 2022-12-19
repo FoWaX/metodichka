@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n,m,f,k;
+    cin >> n >> m;
+    int a[101][101];
+    for (int i=0;i<n;i++)
+    {
+        for (int j=0;j<m;i++)
+        {
+            int z;
+            cin >> z;
+            a[i][j] = z;
+        }
+    }
+    for (int j=m-1;j>=0;j--)
+    {
+        k=0;
+        for (int i = 0;i<n;i++)
+        {
+            if (a[i][j]<0)
+            {
+                k=1;
+            }
+        }
+        if (k==0)
+        {
+            for (int i=0;i<n;i++)
+            {
+                a[i][j]=0;
+            }
+        }
+    }
+    for (int i=0;i<=n;i++)
+    {
+        for (int j=0;j<=m;i++)
+        {
+            cout << a[i][j] << " ";
+        }
+        cout << endl;
+    }
+    return 0;
+}
