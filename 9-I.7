@@ -1,0 +1,27 @@
+#include <iostream>
+#include <cmath>
+#include <fstream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    ifstream fin;
+    fin.open("myfile.txt");
+    string str;
+    int k = 0;
+    while (getline(fin,str,'\n'))
+    {
+        if (str[0] == 'k')
+        {
+            k = 1;
+            cout << str;
+        }
+    }
+    if (k == 0)
+    {
+        cout << "No";
+    }
+    fin.close();
+}
