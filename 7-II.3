@@ -1,0 +1,27 @@
+#include <iostream>
+#include <cmath>
+#include <fstream>
+#include <string>
+#include <Windows.h>
+
+using namespace std;
+
+int main() {
+    string s;
+    getline(cin, s);
+    int k = 0;
+    setlocale(LC_ALL, "Russian");
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+    string glasnie = "уеыаоэяию";
+    for (int i = 0; i < s.length(); i++) {
+        for (int j = 0; j < glasnie.length(); j++) {
+            if (s[i] == glasnie[j]) {
+                k++;
+                break;
+            }
+        }
+    }
+    cout << k;
+    return 0;
+}
