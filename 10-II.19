@@ -1,0 +1,33 @@
+#include <iostream>
+#include <cmath>
+#include <string>
+#include <fstream>
+using namespace std;
+
+ifstream in("input.txt");
+ofstream out("output.txt");
+
+struct student
+{
+	string familia, ima, otchestvo;
+	int gruppa, res;
+};
+
+int main()
+{
+	student a;
+	string s;
+	int n = 0;
+	
+	while (in.peek() != EOF)
+	{
+		in >> a.familia >> a.ima >> a.otchestvo >> a.gruppa >> a.res;
+		if (a.gruppa == 131)
+		{
+			out << a.familia << " " << a.ima << " " << a.otchestvo << " " << a.gruppa << " " << a.res << endl;
+		}
+	}
+	in.close();
+	out.close();
+}
+
