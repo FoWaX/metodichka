@@ -15,7 +15,7 @@ int main()
         getline(in, s);
         for (int i = 0; i < s.size(); i++)
         {
-            if (s[i] > b && isdigit(s[i]) && s[i+1]==' ')
+            if (s[i] > b && isdigit(s[i]))
             {
                 b = s[i];
             }
